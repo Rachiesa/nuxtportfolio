@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(39.42% 0 0);
+  --color-secondary: oklch(93.1% 0 0);
+  --color-tertiary: oklch(65.73% 0.229 25.79);
+  --color-fourth: oklch(17.76% 0 0);
+
+  --font-anton: "Anton", sans-serif;
+  --font-trispace: "Trispace", sans-serif;
+}
