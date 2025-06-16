@@ -4,9 +4,9 @@
     <nav id="nav">
       <div
         class="flex fixed inset-x-0 justify-center md:justify-end top-0 md:right-0 z-10 text-tertiary font-anton md:text-xl p-1 gap-3">
-                <div>
-                              <DotLottieVue id="lottieScroll" style="height: 100px; width: 100px" autoplay loop src="https://lottie.host/7e0b2790-75c0-4a69-a34a-7d12cb7bc1b5/1YP7gqbh8o.lottie">
-                    </DotLottieVue>
+        <div>
+          <DotLottieVue id="lottieScroll" style="height: 100px; width: 100px" autoplay loop src="https://lottie.host/7e0b2790-75c0-4a69-a34a-7d12cb7bc1b5/1YP7gqbh8o.lottie">
+          </DotLottieVue>
         </div>
         <div>
           <button @click="scrollTo('#about')" class="">/About</button>
@@ -185,7 +185,7 @@ onMounted(() => {
     }
 
   });
-  ptl.to("#projectsitem", { y: -50, opacity: 1, duration: 1 },)
+  ptl.to("#projectsitem", { y: -50, opacity: 1, duration: 0.5 },)
   .to("#accordion", { y: 0, opacity: 1 },)
   gsap.utils.snap(0.1);
 
