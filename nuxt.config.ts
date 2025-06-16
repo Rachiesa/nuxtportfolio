@@ -4,13 +4,12 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
-  modules: ['lenis/nuxt'],
-
+modules: ["lenis/nuxt", "shadcn-nuxt"],
   vite: {
     plugins: [tailwindcss()],
   },
 
-  modules: ["shadcn-nuxt"],
+  
   shadcn: {
     /**
      * Prefix for all the imported component

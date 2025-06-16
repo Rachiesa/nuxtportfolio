@@ -1,13 +1,13 @@
 <template>
     <section id='about' class='flex h-screen w-screen '>
-        <div class='w-1/3 bg-secondary hidden md:block'></div>
-        <div class='flex flex-col w-screen md:w-1/3 bg-primary text-tertiary font-anton p-1 gap-3'>
-            <div class='flex justify-end items-end text-xl h-4/12 z-2'>
-                <h2 id='aboutitem' class='opacity-0'>HI, IM RACHIESA YAZID AUDI</h2>
+        <div id='rl' class='w-1/3 bg-secondary hidden md:block'></div>
+        <div id="md" class='flex flex-col w-screen md:w-1/3 bg-primary text-tertiary font-anton p-1 gap-3'>
+            <div class='flex justify-start items-end text-xl h-4/12 z-2'>
+                <h2 id='aboutitem' class='opacity-0'>HELLO, I'M</h2>
             </div>
-            <div class=' h-3/12 text-7xl z-2'>
-                <h1 id='aboutitem' class='opacity-0'>FRONT-END</h1>
-                <h1 id='aboutitem' class='opacity-0'>DEVELOPER</h1>
+            <div class=' h-3/12 text-6xl z-2'>
+                <h1 id='aboutitem' class='opacity-0'>RACHIESA </h1>
+                <h1 id='aboutitem' class='opacity-0'>YAZID AUDI</h1>
             </div>
             <div class='flex flex-col gap-2 h-7/12 z-2'>
                 <p id='aboutitem' class='opacity-0 font-trispace'>I AM AN INFORMATICS ENGINEERING STUDENT WITH
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <div class='w-1/3 bg-secondary hidden md:block'></div>
+        <div id="rl" class='w-1/3 bg-secondary hidden md:block'></div>
     </section>
 </template>
 

@@ -1,20 +1,20 @@
 <template>
         <section id='contact' class='flex h-screen w-screen '>
-            <div class='w-1/3 bg-secondary hidden md:block'></div>
-            <div class='flex flex-col w-screen md:w-1/3  bg-primary text-tertiary font-anton p-1 gap-3'>
+            <div id="rl" class='w-1/3 bg-secondary hidden md:block'></div>
+            <div id="md" class='flex flex-col w-screen md:w-1/3  bg-primary text-tertiary font-anton p-1 gap-3'>
                 <div class='flex justify-end items-end text-md h-1/12'>
                 </div>
                 <div class='flex items-end h-3/12 text-7xl z-2'>
                     <h1 id='contactitem' class='opacity-0'>LET'S TALK</h1>
                 </div>
                 <form id='contactitem' @submit.prevent='submitForm' class='opacity-0 flex flex-col items-start h-7/12 gap-1 z-2'>
-                    <Input type='text' placeholder='NAME' class='hover:animate-pulse placeholder:text-primary text-primary h-1/6 rounded-none bg-tertiary border-none hover:bg-secondary' name='name' v-model="form.name" required />
-                    <Input type='email' placeholder='EMAIL' class='hover:animate-pulse placeholder:text-primary text-primary h-1/6 rounded-none bg-tertiary border-none hover:bg-secondary' name='email' v-model="form.email" required></Input>
-                    <Textarea type='text' placeholder="MESSAGE" class='hover:animate-pulse placeholder:text-primary text-primary h-1/6 rounded-none bg-tertiary border-none hover:bg-secondary' name='message' v-model="form.message" required ></Textarea>
-                    <Button type='submit' class='hover:animate-pulse text-primary h-1/6 w-full rounded-none bg-tertiary hover:bg-secondary border-primary'>{{ result }}</Button>
+                    <Input type='text' placeholder='NAME' class='hover:animate-pulse placeholder:text-primary text-primary h-1/6 rounded-none bg-secondary border-b-2 bp border-tertiary  hover:bg-secondary' name='name' v-model="form.name" required />
+                    <Input type='email' placeholder='EMAIL' class='hover:animate-pulse placeholder:text-primary text-primary h-1/6 rounded-none bg-secondary border-b-2 border-tertiary hover:bg-secondary' name='email' v-model="form.email" required></Input>
+                    <Textarea type='text' placeholder="MESSAGE" class='hover:animate-pulse placeholder:text-primary text-primary h-1/6 rounded-none bg-secondary border-b-2 border-tertiary hover:bg-secondary' name='message' v-model="form.message" required ></Textarea>
+                    <div class="flex justify-end h-1/6 w-full"><Button type='submit' class='hover:animate-pulse text-primary h-4/5 w-2/6  rounded-none bg-tertiary hover:bg-secondary border-primary'>{{ result }}</Button></div>
                 </form>
             </div>
-            <div class='w-1/3 bg-secondary hidden md:block'></div>
+            <div id="rl" class='w-1/3 bg-secondary hidden md:block'></div>
         </section>
 </template>
 
