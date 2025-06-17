@@ -18,7 +18,7 @@
                                                 UTILIZEING SPOTIFY API FOR EXPLORING NEW MUSIC AND ARTISTS
                                             </AccordionContent>
                                             <AccordionContent class="font-anton text-md">
-                                                <a href='https://spotify-utils.vercel.app' target='_blank' class='hover:underline'>{">> WEB-APP"}</a> <br /><a href='https://github.com/Rachiesa/SpotifyUtils' target='_blank' class='hover:underline'> {">> SOURCE-CODE"}</a>
+                                                <a href='https://spotify-utils.vercel.app' target='_blank' class='hover:underline'>>> WEB-APP</a> <br /><a href='https://github.com/Rachiesa/SpotifyUtils' target='_blank' class='hover:underline'>>> SOURCE-CODE</a>
                                             </AccordionContent>
                                             <AccordionContent class="font-anton text-md">
                                                 STATUS : <span class='animate-pulse'>ONLINE</span>
@@ -35,7 +35,7 @@
                                                 UTILIZEING SPOTIFY API FOR EXPLORING NEW MUSIC AND ARTISTS
                                             </AccordionContent>
                                             <AccordionContent class="font-anton text-md">
-                                                <a href='https://spotify-utils.vercel.app' target='_blank' class='hover:underline'>{">> WEB-APP"}</a> <br /><a href='https://github.com/Rachiesa/SpotifyUtils' target='_blank' class='hover:underline'> {">> SOURCE-CODE"}</a>
+                                                <a href='https://spotify-utils.vercel.app' target='_blank' class='hover:underline'>>> WEB-APP</a> <br /><a href='https://github.com/Rachiesa/SpotifyUtils' target='_blank' class='hover:underline'>>> SOURCE-CODE</a>
                                             </AccordionContent>
                                             <AccordionContent class="font-anton text-md">
                                                 STATUS : <span class='animate-pulse'>ONLINE</span>
