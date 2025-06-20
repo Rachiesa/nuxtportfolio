@@ -3,7 +3,7 @@
     <div id="rl" class="w-1/3 bg-secondary hidden md:block"></div>
     <div
       id="md"
-      class="flex flex-col w-screen md:w-1/3 bg-primary text-tertiary font-anton p-1 gap-3"
+      class="flex flex-col w-screen md:w-1/3 bg-[#464646] text-tertiary font-anton p-1 gap-3"
     >
       <div class="flex justify-start items-end text-xl h-4/12 z-2">
         <h2 id="aboutitem" class="opacity-0">HELLO, I'M</h2>
@@ -22,41 +22,39 @@
         <div id="aboutitem" class="opacity-0 flex h-2/2 ">
           <div class="flex flex-wrap w-1/3  h-full">
             <div class="w-2/2 h-2/3 p-0.5"><img @click="web('react')" id='react' src="../assets/icon/ReactLogo.svg" alt="React"
-                            class=' hover:animate-pulse rounded-md '></img></div>
+                            class='hover:cursor-pointer rounded-md '></img></div>
             <div class="w-1/2 h-1/3 p-0.5"><img @click="web('tailwind')" id='tailwind' src="../assets/icon/TailwindLogo.svg" alt="Tailwind"
-                            class='hover:animate-pulse rounded-md'></img></div>
+                            class='hover:cursor-pointer  rounded-md'></img></div>
             <div class="w-1/2 h-1/3 p-0.5">
                 <img @click="web('css')" id='css' src="../assets/icon/CSSLogo.svg" alt="CSS"
-                            class='hover:animate-pulse rounded-md'></img>
+                            class='hover:cursor-pointer  rounded-md'></img>
             </div>
           </div>
           <div class="flex flex-wrap w-1/3  h-full  p-0.5">
             <div class="w-1/2 h-1/3 p-0.5"><img @click="web('photoshop')" id='photoshop' src="../assets/icon/PhotoshopLogo.svg"
-                            alt="Photoshop" class='hover:animate-pulse rounded-md'/></div>
+                            alt="Photoshop" class='hover:cursor-pointer rounded-md'/></div>
             <div class="w-1/2 h-1/3 p-0.5"><img @click="web('illustrator')" id='illustrator' src="../assets/icon/IllustratorLogo.svg"
-                            alt="Illustrator" class='hover:animate-pulse
+                            alt="Illustrator" class='hover:cursor-pointer
                         rounded-md'></img></div>
             <div class="w-1/2 h-1/3 p-0.5"><img @click="web('aftereffects')" id='aftereffects' src="../assets/icon/AfterEffectsLogo.svg"
-                            alt="AfterEffects" class='hover:animate-pulse
+                            alt="AfterEffects" class='hover:cursor-pointer
                         rounded-md'></img></div>
             <div class="w-1/2 h-1/3 p-0.5"><img @click="web('html')" id='html' src="../assets/icon/HTMLLogo.svg" alt="HTML"
-                            class='hover:animate-pulse rounded-md'></img></div>
+                            class='hover:cursor-pointer rounded-md'></img></div>
             <div class="w-1/2 h-1/3 p-0.5"><img @click="web('js')" id='js' src="../assets/icon/JSLogo.svg" alt="JavaScript"
-                            class='hover:animate-pulse rounded-md'></img></div>
+                            class='hover:cursor-pointer rounded-md'></img></div>
             <div class="w-1/2 h-1/3 p-0.5">
-                <img @click="web('email')" id='email' src="../assets/icon/MailLogo.svg" alt="Email"
-                            class='hover:animate-pulse rounded-md'></img>
+                <img id='linkedin' src="../assets/icon/LinkedinLogo.svg" alt="Linkedin"
+                            class='hover:cursor-pointer rounded-md'></img>
             </div>
           </div>
-          <div class="flex flex-wrap w-1/3  h-full  p-0.5">
-            <div class="w-1/2 h-1/3 p-0.5"><img id='linkedin' src="../assets/icon/LinkedinLogo.svg" alt="Linkedin"
-                            class='hover:animate-pulse rounded-md'></img></div>
-            <div class="w-1/2 h-1/3 p-0.5">
-                <img @click="web('email')" id='email' src="../assets/icon/MailLogo.svg" alt="Email"
-                            class='hover:animate-pulse rounded-md'></img>
+          <div class="flex flex-wrap w-1/3 h-full  p-0.5">
+            <div class="w-2/2 h-1/3 p-0.5 items-center">
+                <img @click="web('email')" id='email' src="../assets/icon/MailLogo1B.svg" alt="Email"
+                            class='hover:cursor-pointer rounded-md'></img>
             </div>
-            <div class="w-2/2 h-2/3 p-0.5"><img @click="web('github')" id='github' src="../assets/icon/GitHubLogo.svg" alt="Github"
-                            class='hover:animate-pulse rounded-md'></img></div>
+            <div class="w-2/2 h-2/3 p-1"><img @click="web('github')" id='github' src="../assets/icon/GitHubLogo 1B.svg" alt="Github"
+                            class='hover:cursor-pointer rounded-md'></img></div>
           </div>
         </div>
       </div>
@@ -117,7 +115,7 @@ const web = (web) => {
 import { gsap } from "gsap";
 
 onMounted(() => {
-     const itl = gsap.timeline({ repeat: -1 });
+     const itl = gsap.timeline({ repeat: -1, yoyo: true});
   itl
     .to("#react", { y: -2, duration: 0.1 })
     .to("#react", { y: 0, duration: 0.1 })
@@ -127,10 +125,12 @@ onMounted(() => {
     .to("#css", { y: 0, duration: 0.1 })
     .to("#js", { y: -2, duration: 0.1 })
     .to("#js", { y: 0, duration: 0.1 })
-    .to("#aftereffects", { y: -2, duration: 0.1 })
-    .to("#aftereffects", { y: 0, duration: 0.1 })
+    .to("#linkedin", { y: -2, duration: 0.1 })
+    .to("#linkedin", { y: 0, duration: 0.1 })
     .to("#html", { y: -2, duration: 0.1 })
     .to("#html", { y: 0, duration: 0.1 })
+    .to("#aftereffects", { y: -2, duration: 0.1 })
+    .to("#aftereffects", { y: 0, duration: 0.1 })
     .to("#photoshop", { y: -2, duration: 0.1 })
     .to("#photoshop", { y: 0, duration: 0.1 })
     .to("#illustrator", { y: -2, duration: 0.1 })
@@ -139,39 +139,7 @@ onMounted(() => {
     .to("#email", { y: 0, duration: 0.1 })
     .to("#github", { y: -2, duration: 0.1 })
     .to("#github", { y: 0, duration: 0.1 })
-    .to("#linkedin", { y: -2, duration: 0.1 })
-    .to("#linkedin", { y: 0, duration: 0.1 });
+    ;
 })
  
 </script>
-
-<!-- <div class='grid grid-cols-5 gap-1'>
-                        <img @click="web('react')" id='react' src="../assets/icon/ReactLogo.svg" alt="React"
-                            class=' hover:animate-pulse rounded-md '></img>
-                        <img @click="web('tailwind')" id='tailwind' src="../assets/icon/TailwindLogo.svg" alt="Tailwind"
-                            class='hover:animate-pulse rounded-md'></img>
-                        <img @click="web('js')" id='js' src="../assets/icon/JSLogo.svg" alt="JavaScript"
-                            class='hover:animate-pulse rounded-md'></img>
-                        <img @click="web('html')" id='html' src="../assets/icon/HTMLLogo.svg" alt="HTML"
-                            class='hover:animate-pulse rounded-md'></img>
-                        <img @click="web('css')" id='css' src="../assets/icon/CSSLogo.svg" alt="CSS"
-                            class='hover:animate-pulse rounded-md'></img>
-                        <img alt="React" class='invisible'></img>
-                        <img @click="web('photoshop')" id='photoshop' src="../assets/icon/PhotoshopLogo.svg"
-                            alt="Photoshop" class='hover:animate-pulse rounded-md'></img>
-                        <img @click="web('illustrator')" id='illustrator' src="../assets/icon/IllustratorLogo.svg"
-                            alt="Illustrator" class='hover:animate-pulse
-                        rounded-md'></img>
-                        <img @click="web('aftereffects')" id='aftereffects' src="../assets/icon/AfterEffectsLogo.svg"
-                            alt="AfterEffects" class='hover:animate-pulse
-                        rounded-md'></img>
-                        <img alt="React" class='invisible'></img>
-                        <img @click="web('email')" id='email' src="../assets/icon/MailLogo.svg" alt="Email"
-                            class='hover:animate-pulse rounded-md'></img>
-                        <img alt="React" class='invisible'></img>
-                        <img @click="web('github')" id='github' src="../assets/icon/GitHubLogo.svg" alt="Github"
-                            class='hover:animate-pulse rounded-md'></img>
-                        <img alt="React" class='invisible'></img>
-                        <img id='linkedin' src="../assets/icon/LinkedinLogo.svg" alt="Linkedin"
-                            class='hover:animate-pulse rounded-md'></img>
-                    </div> -->

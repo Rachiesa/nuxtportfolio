@@ -40,7 +40,7 @@
           </div>
           <div
             id="md"
-            class="flex flex-col justify-center items-center w-1/3 bg-primary text-tertiary"
+            class="flex justify-center items-center w-1/3 bg-[#464646] text-tertiary opacity-100"
           >
             <h1 id="Y" class="font-anton text-[200px] z-2">Y</h1>
           </div>
@@ -116,24 +116,26 @@ onMounted(() => {
   gsap.to("#rl", {
     scrollTrigger: {
       trigger: "#nav",
-      start: "20% top",
-      end: "bottom center",
-      toggleActions: "play reverse play reverse",
+      start: "center top",
+      end: "bottom 20%",
+      toggleActions: "play complete reverse reverse",
       scrub: true,
     },
     backgroundColor: "#464646",
-    ease: "power1.out",
+    ease: "steps(200)",
+    duration: 1,
   });
   gsap.to("#md", {
     scrollTrigger: {
       trigger: "#nav",
-      start: "20% top",
-      end: "bottom center",
-      toggleActions: "play reverse play reverse",
+      start: "center top",
+      end: "bottom 20%",
+      toggleActions: "play complete reverse reverse",
       scrub: true,
     },
     backgroundColor: "#e8e8e8",
-    ease: "power1.out",
+    ease: "steps(200)",
+    duration: 1,
   });
 
   gsap.to("#lottieScroll", {
@@ -150,25 +152,25 @@ onMounted(() => {
 
   let fadetl = gsap.timeline({
     scrollTrigger: {
-      trigger: "#about",
-      start: "top center",
-      end: "bottom center",
-      toggleActions: "play pause reverse reverse",
+      trigger: "#nav",
+      start: "center top",
+      end: "bottom 20%",
+      toggleActions: "play complete reverse reverse",
       scrub: false,
     },
   });
-  fadetl.to("#R", { opacity: 0.5, duration: 1 });
+  fadetl.to("#R", { opacity: 0, duration: 1 });
 
   let fadetl1 = gsap.timeline({
     scrollTrigger: {
-      trigger: "#about",
-      start: "top center",
-      end: "bottom center",
-      toggleActions: "play pause reverse reverse",
+      trigger: "#nav",
+      start: "center top",
+      end: "bottom 20%",
+      toggleActions: "play complete reverse reverse",
       scrub: false,
     },
   });
-  fadetl1.to("#A", { opacity: 0.5, duration: 1 });
+  fadetl1.to("#A", { opacity: 0, duration: 1 });
 
   let tl = gsap.timeline({
     scrollTrigger: {

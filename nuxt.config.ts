@@ -4,22 +4,31 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
-modules: ["lenis/nuxt", "shadcn-nuxt"],
+  modules: ["lenis/nuxt", "shadcn-nuxt", "@nuxtjs/google-fonts"],
+  app: {
+    head: {
+      link: [{ rel: "icon", type: "image/x-icon", href: "/profile.png" }],
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },
-
-  
+  googleFonts: {
+    families: {
+      Anton: true,
+      Trispace: true,
+    },
+  },
   shadcn: {
     /**
      * Prefix for all the imported component
      */
-    prefix: '',
+    prefix: "",
     /**
      * Directory that the component lives in.
      * @default "./components/ui"
      */
-    componentDir: './components/ui'
+    componentDir: "./components/ui",
   },
 
   runtimeConfig: {

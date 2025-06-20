@@ -3,7 +3,7 @@
     <div id="rl" class="w-1/3 bg-secondary hidden md:block"></div>
     <div
       id="md"
-      class="flex flex-col w-screen md:w-1/3 bg-primary text-tertiary font-anton p-1 gap-3"
+      class="flex flex-col w-screen md:w-1/3 bg-[#464646] text-tertiary font-anton p-1 gap-3"
     >
       <div class="flex justify-end items-end text-md h-1/12"></div>
       <div class="flex items-end h-3/12 text-7xl z-2">
@@ -17,7 +17,7 @@
         <Input
           type="text"
           placeholder="NAME"
-          class="hover:animate-pulse placeholder:text-primary text-primary h-1/6 rounded-none bg-secondary border-b-2 border-tertiary hover:bg-secondary"
+          class="placeholder:text-primary text-primary h-1/6 rounded-none bg-secondary border-b-2 border-tertiary hover:bg-secondary"
           name="name"
           v-model="form.name"
           required
@@ -25,7 +25,7 @@
         <Input
           type="email"
           placeholder="EMAIL"
-          class="hover:animate-pulse placeholder:text-primary text-primary h-1/6 rounded-none bg-secondary border-b-2 border-tertiary hover:bg-secondary"
+          class="placeholder:text-primary text-primary h-1/6 rounded-none bg-secondary border-b-2 border-tertiary hover:bg-secondary"
           name="email"
           v-model="form.email"
           required
@@ -33,7 +33,7 @@
         <Textarea
           type="text"
           placeholder="MESSAGE"
-          class="hover:animate-pulse placeholder:text-primary text-primary h-1/6 rounded-none bg-secondary border-b-2 border-tertiary hover:bg-secondary"
+          class="placeholder:text-primary text-primary h-1/6 rounded-none bg-secondary border-b-2 border-tertiary hover:bg-secondary"
           name="message"
           v-model="form.message"
           required
@@ -41,7 +41,7 @@
         <div class="flex justify-end h-1/6 w-full">
           <Button
             type="submit"
-            class="hover:animate-pulse text-primary h-4/5 w-2/6 rounded-none bg-tertiary hover:bg-secondary border-primary"
+            class="text-primary h-4/5 w-2/6 rounded-none bg-tertiary border-primary"
             >{{ result }}</Button
           >
         </div>

@@ -2,7 +2,7 @@
 <template>
 <section id='projects' class='flex h-screen w-screen '>
             <div id="rl" class='w-1/3 bg-secondary hidden md:block'></div>
-            <div id="md" class='flex flex-col w-screen md:w-1/3 bg-primary text-tertiary font-anton p-1 gap-3'>
+            <div id="md" class='flex flex-col w-screen md:w-1/3 bg-[#464646] text-tertiary font-anton p-1 gap-3'>
                 <div class='flex items-end h-3/12 text-7xl z-2'>
                     <h1 id='projectsitem' class='opacity-0'>PROJECTS</h1>
                 </div>
@@ -44,7 +44,7 @@
                                 </Accordion>
                             </CarouselItem>
                         </CarouselContent>
-                        <CarouselPrevious />
+                        <CarouselPrevious/>
                         <CarouselNext />
                     </Carousel> 
                 </div>
