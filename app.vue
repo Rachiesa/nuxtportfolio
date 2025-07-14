@@ -2,20 +2,38 @@
   <VueLenis root ref="lenisRef" :options="{ autoRaf: false }" />
   <div id="smooth-content" class="overflow-hidden">
     <nav id="nav">
+      <div class="fixed bottom-15 z-10 w-screen flex justify-center">
+        <DotLottieVue
+          id="lottieScroll"
+          style="height: 100px; width: 100px"
+          autoplay
+          loop
+          src="https://lottie.host/7e0b2790-75c0-4a69-a34a-7d12cb7bc1b5/1YP7gqbh8o.lottie"
+        >
+        </DotLottieVue>
+      </div>
       <div
-        class="flex fixed inset-x-0 justify-center md:justify-end top-0 md:right-0 z-10 text-tertiary font-anton md:text-xl p-1 gap-3"
+        class="flex fixed inset-x-0 justify-center md:justify-cen bottom-0 left-2 z-10 text-tertiary font-anton md:text-xl p-1 gap-3"
       >
-        <div>
-          <DotLottieVue
-            id="lottieScroll"
-            style="height: 100px; width: 100px"
-            autoplay
-            loop
-            src="https://lottie.host/7e0b2790-75c0-4a69-a34a-7d12cb7bc1b5/1YP7gqbh8o.lottie"
-          >
-          </DotLottieVue>
-        </div>
-        <div>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Rachiesa</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <NavigationMenuLink @click="scrollTo('#about')"
+                  >About</NavigationMenuLink
+                >
+                <NavigationMenuLink @click="scrollTo('#projects')"
+                  >Projects</NavigationMenuLink
+                >
+                <NavigationMenuLink @click="scrollTo('#contact')"
+                  >Contact</NavigationMenuLink
+                >
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+        <!-- <div>
           <button @click="scrollTo('#about')" class="">/About</button>
         </div>
         <div>
@@ -23,7 +41,7 @@
         </div>
         <div>
           <button @click="scrollTo('#contact')" class="">/Contact</button>
-        </div>
+        </div> -->
       </div>
       <div class="hidden md:block">
         <div class="flex h-screen w-screen">
@@ -74,6 +92,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 const scrollTo = (id) => {
@@ -108,8 +136,7 @@ watchEffect((onInvalidate) => {
 });
 
 onMounted(() => {
-  gsap.set("#lottieScroll", { x: -445, y: 800 });
-  gsap.to("#lottieScroll", { y: 600, duration: 2 });
+  gsap.from("#lottieScroll", { y: 600, duration: 2 });
   gsap.from("#R", { y: 600, opacity: 0, duration: 1 });
   gsap.from("#Y", { y: 600, opacity: 0, duration: 1.2 });
   gsap.from("#A", { y: 600, opacity: 0, duration: 1.4 });

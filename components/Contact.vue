@@ -41,7 +41,7 @@
         <div class="flex justify-end h-1/6 w-full">
           <Button
             type="submit"
-            class="text-primary h-4/5 w-2/6 rounded-none bg-tertiary border-primary"
+            class="text-primary h-4/5 w-2/6 rounded-none bg-tertiary border-primary hover:text-white"
             >{{ result }}</Button
           >
         </div>
