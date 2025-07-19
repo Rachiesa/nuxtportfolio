@@ -15,7 +15,10 @@
       <div
         class="flex fixed inset-x-0 justify-center md:justify-cen bottom-0 left-2 z-10 text-tertiary font-anton md:text-xl p-1 gap-3"
       >
-        <NavigationMenu>
+        <NavigationMenu
+          disablePointerLeaveClose="true"
+          disableHoverTrigger="true"
+        >
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Rachiesa</NavigationMenuTrigger>
@@ -102,6 +105,7 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 const scrollTo = (id) => {

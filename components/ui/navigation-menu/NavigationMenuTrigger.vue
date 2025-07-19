@@ -11,7 +11,10 @@ import { cn } from "@/lib/utils";
 import { navigationMenuTriggerStyle } from ".";
 
 const props = defineProps<
-  NavigationMenuTriggerProps & { class?: HTMLAttributes["class"] }
+  NavigationMenuTriggerProps & {
+    class?: HTMLAttributes["class"];
+    disablePointerLeaveClose?: boolean;
+  }
 >();
 
 const delegatedProps = reactiveOmit(props, "class");
@@ -27,7 +30,7 @@ const playerRef = ref("");
     :class="
       cn(
         navigationMenuTriggerStyle(),
-        'group w-[200px] flex justify-between border-2 ',
+        'group w-[200px] flex justify-between border-2 data-[state=closed]:text-tertiary data-[state=open]:text-primary',
         props.class
       )
     "
